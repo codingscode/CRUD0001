@@ -20,12 +20,12 @@ ver
 http://localhost:5500
 http://localhost:5500/admin
 
+npm i @admin-bro/mongoose mongoose
+
+instalar mongodb server
 
 
-
-
-
-
+node admin.js
 
 
 
