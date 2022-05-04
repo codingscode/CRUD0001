@@ -44,7 +44,23 @@ AdminBro.registerAdapter(AdminBroMongoose)
 
 
 const adminBroOptions = new AdminBro({
-   resources: [Project],
+   resources: [
+      { resource: Project, options: {
+        properties: {
+           description: { type: 'richtext' },
+           created_at: {
+              isVisible: { edit: false, list: true, show: true }
+           }
+        }
+      }}
+   ],
+   locale: {
+      translations: {
+         labels: {
+            Project: 'Meus projetos'
+         }
+      }
+   },
    rootPath: '/admin'
 })
 
